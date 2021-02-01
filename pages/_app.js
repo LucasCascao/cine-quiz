@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
@@ -36,7 +37,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>{db.titlePage}</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet" />
       </Head>
       <ThemeProvider theme={theme}>

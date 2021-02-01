@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
@@ -9,27 +10,11 @@ import QuizBackground from '../src/components/QuizBackground';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Footer from '../src/components/Footer';
 import QuizLogo from '../src/components/QuizLogo';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
+import QuizContainer from '../src/components/QuizContainer'
 
-// function Title(props) {
-//   return (
-//     <h1>
-//       {props.children}
-//     </h1>
-//   )
-// }
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
-
-export default function Home() {
+function Home() {
   const router = useRouter();
   const [nome, setName] = React.useState('');
   return (
@@ -48,17 +33,15 @@ export default function Home() {
               console.log('Só vamos');
             }}
             >
-              <input
+              <Input
+                name="inputNomeDoJogador"
                 type="text"
                 placeholder="Diz ai seu nome"
-                onChange={function(event) {
-                  setName(event.target.value);
-                }}
+                onChange={(event) => setName(event.target.value)}
               />
-              <button type="submit" disabled={nome.length <= 0}>
-                Jogar 
-                {nome}
-              </button>
+              <Button type="submit" disabled={nome.length <= 0}>
+                {`Jogar ${nome}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
@@ -76,3 +59,5 @@ export default function Home() {
     </QuizBackground>
   );
 }
+
+export default Home;
