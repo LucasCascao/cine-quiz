@@ -46,11 +46,22 @@ function Home() {
           </Widget.Content>
         </Widget>
         <Widget>
-          <Widget.Header>
-            <h1>Quizes maneiros para ficarem de olho</h1>
-          </Widget.Header>
           <Widget.Content>
-            <p>Veja esses quizes que são fora de serie que o pessoal da Imersão React da Alura fizeram:</p>
+            <h1>Veja esses quizes que são fora de serie que o pessoal da Imersão React da Alura fizeram:</h1>
+            <ul>
+              {db.external.map((externalLink, externalLinkIndex) => {
+                const [projectName, githubUser] = externalLink.replace('https://','').replace('.vercel.app/','').split('.');
+                return (
+                  <li key={`externalLink__${externalLinkIndex}`}>
+                    <Widget.Topic
+                      href={externalLink}
+                    >
+                      {`${githubUser}/${projectName}`}
+                    </Widget.Topic>
+                  </li>
+                );
+              })}
+            </ul>
           </Widget.Content>
         </Widget>
         <Footer />

@@ -1,11 +1,11 @@
 import React from 'react';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import QuizLogo from '../src/components/QuizLogo';
-import Widget from '../src/components/Widget';
-import QuestionWidget from '../src/components/QuestionWidget'
+import QuizBackground from '../../src/components/QuizBackground';
+import QuizContainer from '../../src/components/QuizContainer';
+import QuizLogo from '../../src/components/QuizLogo';
+import Widget from '../../src/components/Widget';
+import QuestionWidget from '../../src/components/QuestionWidget'
 
-import db from '../db.json'
+import db from '../../db.json'
 
 const screenStates = {
   QUIZ: 'QUIZ',
